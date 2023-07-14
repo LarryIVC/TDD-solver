@@ -2,7 +2,6 @@ class Solver
   def factorial(number)
     raise 'Error the argument is not integer' unless number.is_a?(Integer)
     raise 'Error the argument is negative' if number.negative?
-    # return 1 when number is 0 or 1
     return 1 if number.zero? || number == 1
   end
 end
@@ -21,6 +20,12 @@ describe Solver do
       solver = Solver.new
       expect(solver.factorial(1)).to eq(1)
       expect(solver.factorial(0)).to eq(1)
+    end
+    # calculate factorial
+    it 'return factorial of argument' do
+      solver = Solver.new
+      expect(solver.factorial(5)).to eq(120)
+      expect(solver.factorial(4)).to eq(24)
     end
   end
 end
