@@ -13,7 +13,9 @@ class Solver
     word.reverse
   end
 
-  def fizzbuzz(number) end
+  def fizzbuzz(number)
+    raise 'Error the argument is not integer' unless number.is_a?(Integer)
+  end
 end
 
 describe Solver do
