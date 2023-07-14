@@ -65,5 +65,10 @@ describe Solver do
       solver = Solver.new
       expect { solver.fizzbuzz('a') }.to raise_error('Error the argument is not integer')
     end
+    it 'return fizz when argument is divisible by 3' do
+      solver = Solver.new
+      expect(solver.fizzbuzz(3)).to eq('fizz')
+      expect(solver.fizzbuzz(9)).to eq('fizz')
+    end
   end
 end
