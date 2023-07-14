@@ -15,6 +15,7 @@ class Solver
 
   def fizzbuzz(number)
     raise 'Error the argument is not integer' unless number.is_a?(Integer)
+    return 'fizz' if (number % 3).zero?
   end
 end
 
