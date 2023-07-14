@@ -83,5 +83,10 @@ describe Solver do
       expect(solver.fizzbuzz(15)).to eq('fizzbuzz')
       expect(solver.fizzbuzz(30)).to eq('fizzbuzz')
     end
+    it 'return the number as a string when argument is not divisible by 3 or 5' do
+      solver = Solver.new
+      expect(solver.fizzbuzz(4)).to eq('4')
+      expect(solver.fizzbuzz(7)).to eq('7')
+    end
   end
 end
