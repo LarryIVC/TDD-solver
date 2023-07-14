@@ -1,9 +1,9 @@
-# Create a class called Solver
 class Solver
-  # Create a method called factorial
   def factorial(number)
     raise 'Error the argument is not integer' unless number.is_a?(Integer)
-    raise 'Error the argument is not greater than zero' unless number.positive?
+    raise 'Error the argument is negative' if number.negative?
+    # return 1 when number is 0 or 1
+    return 1 if number.zero? || number == 1
   end
 end
 
@@ -12,10 +12,10 @@ describe Solver do
     it 'has one argument' do
       expect(subject).to respond_to(:factorial).with(1).argument
     end
-    it 'argument is integer greater than zero' do
+    it 'argument is integer greater or equal than zero' do
       solver = Solver.new
       expect { solver.factorial('a') }.to raise_error('Error the argument is not integer')
-      expect { solver.factorial(-4) }.to raise_error('Error the argument is not greater than zero')
+      expect { solver.factorial(-4) }.to raise_error('Error the argument is negative')
     end
     it 'return 1 when argument is 1 or 0' do
       solver = Solver.new
