@@ -8,7 +8,7 @@ class Solver
   end
 
   def reverse(word)
-
+    raise 'Error the argument is not string' unless word.is_a?(String)
   end
 end
 
