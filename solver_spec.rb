@@ -8,7 +8,7 @@ class Solver
   end
 
   def reverse(word)
-    
+
   end
 end
 
@@ -38,6 +38,11 @@ describe Solver do
   describe '#reverse' do
     it 'has one argument' do
       expect(subject).to respond_to(:reverse).with(1).argument
+    end
+    it 'argument is string' do
+      solver = Solver.new
+      expect { solver.reverse(1) }.to raise_error('Error the argument is not string')
+      expect { solver.reverse(true) }.to raise_error('Error the argument is not string')
     end
   end
 end
