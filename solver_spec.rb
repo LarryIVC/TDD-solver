@@ -1,6 +1,9 @@
 # Create a class called Solver
 class Solver
-
+  # Create a method called factorial
+  def factorial(number)
+    
+  end
 end
 
 describe Solver do
@@ -9,5 +12,5 @@ describe Solver do
     it 'has one argument' do
       expect(subject).to respond_to(:factorial).with(1).argument
     end
+  end
 end
-end 
