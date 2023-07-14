@@ -59,5 +59,9 @@ describe Solver do
     it 'has one argument' do
       expect(subject).to respond_to(:fizzbuzz).with(1).argument
     end
+    it 'argument is integer' do
+      solver = Solver.new
+      expect { solver.fizzbuzz('a') }.to raise_error('Error the argument is not integer')
+    end
   end
 end
