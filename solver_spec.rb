@@ -3,6 +3,8 @@ class Solver
     raise 'Error the argument is not integer' unless number.is_a?(Integer)
     raise 'Error the argument is negative' if number.negative?
     return 1 if number.zero? || number == 1
+
+    (1..number).inject(:*)
   end
 end
 
