@@ -77,5 +77,10 @@ describe Solver do
       expect(solver.fizzbuzz(5)).to eq('buzz')
       expect(solver.fizzbuzz(10)).to eq('buzz')
     end
+    it 'return fizzbuzz when argument is divisible by 3 and 5' do
+      solver = Solver.new
+      expect(solver.fizzbuzz(15)).to eq('fizzbuzz')
+      expect(solver.fizzbuzz(30)).to eq('fizzbuzz')
+    end
   end
 end
