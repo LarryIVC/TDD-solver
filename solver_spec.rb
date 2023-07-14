@@ -52,4 +52,10 @@ describe Solver do
       expect(solver.reverse('world')).to eq('dlrow')
     end
   end
+
+  describe '#fizzbuzz' do
+    it 'has one argument' do
+      expect(subject).to respond_to(:fizzbuzz).with(1).argument
+    end
+  end
 end
