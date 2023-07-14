@@ -44,5 +44,10 @@ describe Solver do
       expect { solver.reverse(1) }.to raise_error('Error the argument is not string')
       expect { solver.reverse(true) }.to raise_error('Error the argument is not string')
     end
+    it 'return reverse of argument' do
+      solver = Solver.new
+      expect(solver.reverse('hello')).to eq('olleh')
+      expect(solver.reverse('world')).to eq('dlrow')
+    end
   end
 end
